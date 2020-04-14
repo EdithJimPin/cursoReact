@@ -1,68 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inicializar proyecto con REACT
 
-## Available Scripts
+(para numerar se usa N. )
+1. Crear un repositorio en GitHub
+2. Clonar el repositorio a la pc
+3. Abrir el repositorio en VisualStudioCode
+4. Abrir nueva terminal y colocar el siguiente código npx create-react-app 
+5. Posicionarnos en la carpeta en la cual se guardo el proyecto. cd nombre, si ya se encuentra en la carpeta entonces saltamos este paso.
+6. y ejecutar el siguiente código `npm start`
 
-In the project directory, you can run:
+Una vez hecho esto aparecera en el navegador el template de react.
 
-### `npm start`
+### `Carpetas descargadas`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+El archivo Readme es solo documentación, es este archivo.
+Archivo Package json, nos lista las dependencias y los scripts que podemos ejecutar.
+Archivo gitignore, es el control de versiones en git.
+Carpeta node modules, es de java script y todo su código esta ahí, no es necesario tocarla.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Public, archivosrelacionados con HTML, encontramos un index.html en la parte del div id="root" se mmonta la app de react
 
-### `npm test`
+Dentro de la carpeta src se encuentran los archivo css y javaScript, dentro del archivo index.js tenemos código de react.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En index.js se van a importar react y react-dom, también el archivo index.css que esta dentro de la misma carpeta, solo se encarga de arrancar la app.
 
-### `npm run build`
+La app se encuentra en app.js
+Es un jsx, que es un archivo js en el cual se tiene etiquetas html.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `index.js`
+Archivo principal en donde se encuentra el código de react, aquí se importan los archivos que trabajan con react.
+De esta forma se manda a llamar (se importa) la biblioteca de react:
+```
+import React from 'react';
+```
+Este método pinta la interfaz en la pantalla, es decir App que es el nombre del componente se va a pintar en el id root que se encuentra en un div de un html.
+```
+ReactDom.render(<App/>, document.getElementById ('root'));
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### `App.js`
+En este archivo se encuentra la aplicación o componente.
+Se habla de un componente y hay que importarlo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Qué significa className, se usa para referirse a una clase de css y es para no confundirla con la clase del componente. 
 
-### `npm run eject`
+```
+class //Representa un objeto
+render //cada componente tiene un método llamado render
+return // retorna la interfaz de html
+{}  // Sirve para interpretar código JavaScript dentro de un componente y así  agregar promps.
+```
+**Componente**
+Un componente se crea de la siguiente forma:
+```
+class NombreDelComponente extends component{
+    render(){
+        return(
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+        )
+    }
+}
+export default NombreDelComponente
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
